@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Ohjelmoijakysely</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top"> <!-- Navbar start -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <p class="navbar-brand">Ohjelmoijakysely</p>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Kysely</a></li>
+                        <li class="dropdown">
+                            <a href="record-count.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tulokset <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="record-count.html">Vastauksien määrä</a></li>
+                                <li><a href="distributions.html">Hajonnat</a></li>
+                                <li><a href="averages.html">Keskiarvot</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> <!-- Navbar end -->
+        
+        <div class="container">
+            <form action="insert.php" method="post" class="form-horizontal">
+                <div class="col-sm-11"><h3>Yleistiedot</h3></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="ika">Ikä:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="number" id="ika" name="ika" required min="15" max="65">
+                    </div>
+                    <label class="green col-sm-4"> Arvoalue: 15-65</label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="sukupuoli">Sukupuoli:</label>
+                    <div class="col-sm-2 radio">
+                        <label><input class="form-check-input" type="radio" name="sukupuoli" value="1" required>Mies</label><br>
+                        <label><input class="form-check-input" type="radio" name="sukupuoli" value="2" required>Nainen</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="kokemus">Kokemus vuosissa:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="number" size="2" name="kokemus" required min="0" max="50">
+                    </div>
+                    <label class="green col-sm-4"> Arvoalue: 0-50</label>
+                </div>
+                
+                
+                <div class="col-sm-11"><h3>Arvioi ohjelmointiosaamistasi</h3></div>
+                
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Ohjelmointi yleisellä tasolla</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="ohjelmointi" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="ohjelmointi" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="ohjelmointi" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="ohjelmointi" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="ohjelmointi" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Web frontend</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="frontend" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="frontend" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="frontend" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="frontend" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="frontend" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Web backend</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="backend" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="backend" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="backend" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="backend" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="backend" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Natiivi mobiili</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="natiivi" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="natiivi" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="natiivi" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="natiivi" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="natiivi" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Hybridi mobiili</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="hybridi" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="hybridi" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="hybridi" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="hybridi" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="hybridi" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Relaatiotietokannat</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="relaatio" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="relaatio" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="relaatio" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="relaatio" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="relaatio" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">NoSQL-tietokannat</label>
+                    <div class="col-sm-6 radio">
+                        <label><input class="form-check-input" required type="radio" name="nosql" value="5">Erittäin hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="nosql" value="4">Hyvä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="nosql" value="3">Tyydyttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="nosql" value="2">Välttävä</label><br>
+                        <label><input class="form-check-input" required type="radio" name="nosql" value="1">Heikko</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-sm-9 col-sm-push-3">
+                    <input type="submit" class="btn btn-primary" value="Hyväksy">
+                    <input type="reset" class="btn btn-default" value="Tyhjennä">
+                </div>
+
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

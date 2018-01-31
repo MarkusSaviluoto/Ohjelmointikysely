@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ohjelmoijakysely</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <p class="navbar-brand">Ohjelmoijakysely</p>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Kysely</a></li>
+                        <li class="dropdown">
+                            <a href="record-count.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tulokset <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="record-count.html">Vastauksien määrä</a></li>
+                                <li><a href="distributions.html">Hajonnat</a></li>
+                                <li class="active"><a href="averages.html">Keskiarvot</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"><h1>Ohjelmoijakyselyn tulokset</h1></div>
+                <div class="col-sm-12"><h3>Keskiarvot</h3></div>
+                
+                <div class="col-md-6">
+                    <canvas id="ageChart"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="experienceChart"></canvas>
+                </div>
+                <div class="col-md-12">
+                    <canvas id="programmingChart"></canvas>
+                </div>
+            </div>
+            
+        </div>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="js/averages.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
