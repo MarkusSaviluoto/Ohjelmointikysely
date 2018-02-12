@@ -11,7 +11,7 @@ $(document).ready(function(){
                     [{
                         label: 'Ikä',
                         data: [data[0].avg_age],
-                        backgroundColor: ["#3e95cd"]
+                        backgroundColor: ["#daa520"]
                     }]
             };
             
@@ -45,7 +45,7 @@ $(document).ready(function(){
                     [{
                         label: 'Kokemus',
                         data: [data[0].avg_experience_years],
-                        backgroundColor: ["#3e95cd"]
+                        backgroundColor: ["#3b5998"]
                     }]
             };
             
